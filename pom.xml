@@ -36,6 +36,7 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <remote.server>http://188.166.163.32:8081/manager/text</remote.server>
     </properties>
 
     <build>
