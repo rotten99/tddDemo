@@ -49,7 +49,7 @@ class DBFacadeTest {
 
     @Test
     public void test() {
-        System.out.println("testing database connection");
+        System.out.println("testing database connection, to see first name");
         String sql = "select fname from startcode_test.usertable";
         try(ResultSet rs = con.prepareStatement(sql).executeQuery()) {
             String expected = "Hans";
