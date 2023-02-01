@@ -51,11 +51,12 @@ class DBFacadeTest {
     public void test() {
         System.out.println("testing database connection, to see first name");
         String sql = "select fname from startcode_test.usertable";
-        try(ResultSet rs = con.prepareStatement(sql).executeQuery()) {
+        try (ResultSet rs = con.prepareStatement(sql).executeQuery()) {
             String expected = "Hans";
-            rs.next();
-            String actual = rs.getString("fname");
-            assertEquals(expected,actual);
+            if (rs.next()) {
+                String actual = rs.getString("fname");
+                assertEquals(expected, actual);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
