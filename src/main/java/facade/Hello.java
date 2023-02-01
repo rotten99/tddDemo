@@ -76,8 +76,6 @@ public class Hello {
         } else if (isAllUpper(name)) {
             exclamation = "!";
         }
-
-
         return "Hello, " + name + exclamation;
     }
 
